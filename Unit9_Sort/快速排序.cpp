@@ -14,7 +14,7 @@ int main() {
     }
     cout << endl;
     // 调用直接插入排序函数
-    QuickSort(arr, 0, 10);
+    QuickSort(arr, 0, 9);
     // 打印排序后的结果
     cout << "排序后的结果如下所示：" << endl;
     for (int i : arr) {

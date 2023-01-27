@@ -40,18 +40,16 @@ void SelectSort1(int* arr, int n) {
 void SelectSort2(int* arr, int n) {
     for (int i = 0; i < n - 1; ++i) {
         int k = i;
-        int temp = arr[i];
         for (int j = i + 1; j < n; ++j) {
-            if (temp > arr[j]) {
-                temp = arr[j];
+            if (arr[j] < arr[k]) {
                 k = j;
             }
         }
         // 如果k != i的话就交换位置
         if (k != i) {
-            int temp1 = arr[i];
+            int temp = arr[i];
             arr[i] = arr[k];
-            arr[k] = temp1;
+            arr[k] = temp;
         }
     }
 }
