@@ -1,7 +1,7 @@
 {
     "code-runner.executorMap": {
-        "c": "cd $dir && gcc $fileName -o D:\\A_code\\vs_code\\DataStruct\\build\\$fileNameWithoutExt && D:\\A_code\\vs_code\\DataStruct\\build\\$dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o D:\\A_code\\vs_code\\DataStruct\\build\\$fileNameWithoutExt && D:\\A_code\\vs_code\\DataStruct\\build\\$dir$fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o D:\\A_code\\vs_code\\DataStructure\\build\\$fileNameWithoutExt && D:\\A_code\\vs_code\\DataStructure\\build\\$dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o D:\\A_code\\vs_code\\DataStructure\\build\\$fileNameWithoutExt && D:\\A_code\\vs_code\\DataStructure\\build\\$dir$fileNameWithoutExt",
     },
     "files.associations": {
         "iostream": "cpp",
