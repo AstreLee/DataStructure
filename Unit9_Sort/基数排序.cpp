@@ -10,6 +10,7 @@ typedef struct node {
 // r是要排序数字的基数，d是最大位数
 void radixSort(NodeType* &p, int r, int d) {
     NodeType* head[MAXD], *tail[MAXD];  // 定义头指针数组和尾指针
+    NodeType* t;  // 指向当前尾结点
     for (int i = 0; i < d; ++i) {
         for (int j = 0; j < r; ++j) {
             head[j] = tail[j] = NULL;  // 初始化链队的首、尾指针 
@@ -25,9 +26,18 @@ void radixSort(NodeType* &p, int r, int d) {
             }
             p = p->next;  // 继续取下一个数
         }
+        p = NULL;  // 重新用p来收集所有的结点
+        for (int j = 0; j < r; ++j) {
+            if (head[j] != NULL) {
+                if (p == NULL) {
+                    p = head[j];
+                    t = tail[j];
+                } else {
+                    t->next = head[j];
+                    t = tail[j];
+                }
+            }
+        }
+        t->next = NULL;
     }
-}
-
-int main() {
-
 }
