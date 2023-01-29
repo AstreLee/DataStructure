@@ -6,16 +6,14 @@ void SelectSort2(int* arr, int n);
 
 
 int main() {
-   // 澹版槑涓�涓贡搴忔暟缁?
     int arr[] = {1, 3, 2, 5, 1, 5, 4, 199};
-    // 鎵撳嵃鎺掑簭鍓嶇殑缁撴灉
-    cout << "鎺掑簭鍓嶇殑缁撴灉濡備笅鎵�绀猴細" << endl;
+    cout << "before sort" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
     cout << endl;
     SelectSort2(arr, 8);
-    cout << "这是提交到本地存储库中的内容" << endl;
+    cout << "after sort" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
