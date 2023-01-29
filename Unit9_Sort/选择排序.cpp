@@ -8,7 +8,7 @@ void SelectSort2(int* arr, int n);
 
 int main() {
    // 声明一个乱序数组
-    int arr[] = {1, 3, 2, 5, 1, 5, 4, 100};
+    int arr[] = {1, 3, 2, 5, 1, 5, 4, 99};
     // 打印排序前的结果
     cout << "排序前的结果如下所示：" << endl;
     for (int i : arr) {
