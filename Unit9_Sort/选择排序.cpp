@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// å‡½æ•°å£°æ˜Ž
+// º¯ÊýÉùÃ÷
 void SelectSort1(int* arr, int n);
 void SelectSort2(int* arr, int n);
 
@@ -15,10 +15,10 @@ int main() {
         cout << i << " ";
     }
     cout << endl;
-    // è°ƒç”¨ç›´æŽ¥æ’å…¥æŽ’åºå‡½æ•°
+    // µ÷ÓÃÖ±½Ó²åÈëÅÅÐòº¯Êý
     SelectSort2(arr, 8);
-    // æ‰“å°æŽ’åºåŽçš„ç»“æžœ
-    cout << "æŽ’åºåŽçš„ç»“æžœå¦‚ä¸‹æ‰€ç¤ºï¼š" << endl;
+    // ´òÓ¡ÅÅÐòºóµÄ½á¹û
+    cout << "ÅÅÐòºóµÄ½á¹ûÈçÏÂËùÊ¾£º" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
@@ -36,7 +36,7 @@ void SelectSort1(int* arr, int n) {
     }
 }
 
-// ä¸‹é¢æ˜¯æ”¹è¿›ç‰ˆçš„é€‰æ‹©æŽ’åºï¼Œå®žé™…ä¸Šæˆ‘ä»¬ä¸éœ€è¦æ¯æ¬¡éƒ½äº¤æ¢ï¼Œæœ€åŽä¸€æ¬¡æ€§äº¤æ¢å°±OK
+// ÏÂÃæÊÇ¸Ä½ø°æµÄÑ¡ÔñÅÅÐò£¬Êµ¼ÊÉÏÎÒÃÇ²»ÐèÒªÃ¿´Î¶¼½»»»£¬×îºóÒ»´ÎÐÔ½»»»¾ÍOK
 void SelectSort2(int* arr, int n) {
     for (int i = 0; i < n - 1; ++i) {
         int k = i;
@@ -45,7 +45,7 @@ void SelectSort2(int* arr, int n) {
                 k = j;
             }
         }
-        // å¦‚æžœk != içš„è¯å°±äº¤æ¢ä½ç½?
+        // Èç¹ûk != iµÄ»°¾Í½»»»Î»ÖÃ
         if (k != i) {
             int temp = arr[i];
             arr[i] = arr[k];
