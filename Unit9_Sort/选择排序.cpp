@@ -6,10 +6,10 @@ void SelectSort2(int* arr, int n);
 
 
 int main() {
-   // 声明一个乱序数组
+   // 澹版槑涓�涓贡搴忔暟缁?
     int arr[] = {1, 3, 2, 5, 1, 5, 4, 199};
-    // 打印排序前的结果
-    cout << "排序前的结果如下所示：" << endl;
+    // 鎵撳嵃鎺掑簭鍓嶇殑缁撴灉
+    cout << "鎺掑簭鍓嶇殑缁撴灉濡備笅鎵�绀猴細" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
