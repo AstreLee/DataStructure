@@ -1,24 +1,24 @@
 #include <iostream>
 using namespace std;
 
-// º¯ÊýÉùÃ÷
+// å‡½æ•°å£°æ˜Ž
 void SelectSort1(int* arr, int n);
 void SelectSort2(int* arr, int n);
 
 
 int main() {
    // ÉùÃ÷Ò»¸öÂÒÐòÊý×é
-    int arr[] = {1, 3, 2, 5, 1, 5, 4, 99};
+    int arr[] = {1, 3, 2, 5, 1, 5, 4, 199};
     // ´òÓ¡ÅÅÐòÇ°µÄ½á¹û
     cout << "ÅÅÐòÇ°µÄ½á¹ûÈçÏÂËùÊ¾£º" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
     cout << endl;
-    // µ÷ÓÃÖ±½Ó²åÈëÅÅÐòº¯Êý
+    // è°ƒç”¨ç›´æŽ¥æ’å…¥æŽ’åºå‡½æ•°
     SelectSort2(arr, 8);
-    // ´òÓ¡ÅÅÐòºóµÄ½á¹û
-    cout << "ÅÅÐòºóµÄ½á¹ûÈçÏÂËùÊ¾£º" << endl;
+    // æ‰“å°æŽ’åºåŽçš„ç»“æžœ
+    cout << "æŽ’åºåŽçš„ç»“æžœå¦‚ä¸‹æ‰€ç¤ºï¼š" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
@@ -36,7 +36,7 @@ void SelectSort1(int* arr, int n) {
     }
 }
 
-// ÏÂÃæÊÇ¸Ä½ø°æµÄÑ¡ÔñÅÅÐò£¬Êµ¼ÊÉÏÎÒÃÇ²»ÐèÒªÃ¿´Î¶¼½»»»£¬×îºóÒ»´ÎÐÔ½»»»¾ÍOK
+// ä¸‹é¢æ˜¯æ”¹è¿›ç‰ˆçš„é€‰æ‹©æŽ’åºï¼Œå®žé™…ä¸Šæˆ‘ä»¬ä¸éœ€è¦æ¯æ¬¡éƒ½äº¤æ¢ï¼Œæœ€åŽä¸€æ¬¡æ€§äº¤æ¢å°±OK
 void SelectSort2(int* arr, int n) {
     for (int i = 0; i < n - 1; ++i) {
         int k = i;
@@ -45,7 +45,7 @@ void SelectSort2(int* arr, int n) {
                 k = j;
             }
         }
-        // Èç¹ûk != iµÄ»°¾Í½»»»Î»ÖÃ
+        // å¦‚æžœk != içš„è¯å°±äº¤æ¢ä½ç½?
         if (k != i) {
             int temp = arr[i];
             arr[i] = arr[k];
