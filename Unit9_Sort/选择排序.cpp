@@ -15,7 +15,7 @@ int main() {
     }
     cout << endl;
     SelectSort2(arr, 8);
-    cout << "鎺掑簭鍚庣殑缁撴灉濡備笅鎵�绀猴細" << endl;
+    cout << "这是提交到本地存储库中的内容" << endl;
     for (int i : arr) {
         cout << i << " ";
     }
