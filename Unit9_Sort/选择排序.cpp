@@ -6,7 +6,7 @@ void SelectSort2(int* arr, int n);
 
 
 int main() {
-    int arr[] = {1, 3, 2, 5, 1, 5, 4, 80};
+    int arr[] = {1, 3, 2, 5, 1, 5, 4, 13};
     cout << "before sort" << endl;
     for (int i : arr) {
         cout << i << " ";
