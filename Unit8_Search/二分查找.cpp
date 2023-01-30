@@ -17,25 +17,11 @@ int main() {
 }
 
 int BinarySearch(int* pt, int n, int target) {
-    // 下面是如果存在的情况下正常的二分查找
-    // 这种是建立在target在数组中已经存在的情况下
-    // 那么如果我们想让有这个元素就返回对应下标，没有这个元素就返回插入位置呢？
-    // 看看下面的方法
-    // int low = 0;
-    // int high = n - 1;
-    // while (low <= high) {
-    //     int mid = low + (high - low) / 2;
-    //     if (pt[mid] < target)  low = mid + 1;
-    //     else if (pt[mid] > target)  high = mid - 1;
-    //     else return mid;
-    // 这种是建立在target在数组中已经存在的情况下
-    // 那么如果我们想让有这个元素就返回对应下标，没有这个元素就返回插入位置呢？
-    // 看看下面的方法
     int low = 0;
     int high = n - 1;
     while (low <= high) {
         int mid = low + (high - low) / 2;
-        if (pt[mid] < target)  low = mid + 1;
+        if (pt[mid] <= target)  low = mid + 1;
         else high = mid - 1;
     }
     return low;

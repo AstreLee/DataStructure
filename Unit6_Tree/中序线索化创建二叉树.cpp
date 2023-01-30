@@ -25,6 +25,7 @@ void threadBiTree(TBTNode* & p) {
         } else {
             pre->rtag = 0;
         }
+        pre = p;
         threadBiTree(p->rchild);  // ЯпЫїЛЏгвзгЪї
     }
 }
