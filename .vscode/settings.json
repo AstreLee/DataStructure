@@ -45,4 +45,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     }
+    "[cpp]": {"files.encoding": "gbk"},
+    "[c]": {"files.encoding": "gbk"}
 }
