@@ -45,6 +45,12 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     }
-    "[cpp]": {"files.encoding": "gbk"},
-    "[c]": {"files.encoding": "gbk"}
+    "[cpp]": {
+        "files.encoding": "gbk"
+    },
+    "[c]": {
+        "files.encoding": "gbk"
+    },
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}"
 }
