@@ -35,7 +35,7 @@ void destoryBt(BTNode* t) {
 BTNode* findNode(BTNode* t, ElemType x) {
     BTNode* temp = NULL;
     if (t == NULL)
-        return NULL;
+        return NULL;  // 叶子结点没有找到返回NULL
     else if (t->data == x)
         return t;
     else {
@@ -85,13 +85,17 @@ void postOrder(BTNode* t) {
 
 // 获取二叉树中所有结点数
 int getNodesNum(BTNode* t) {
-    if (t == NULL)  return 0;
-    else return getNodesNum(t->lchild) + getNodesNum(t->rchild) + 1;  // 左子树的个数加上右子树的个数再加上根节点
+    if (t == NULL)
+        return 0;
+    else
+        return getNodesNum(t->lchild) + getNodesNum(t->rchild) +
+               1;  // 左子树的个数加上右子树的个数再加上根节点
 }
 
 // 输出一个二叉树中的所有叶子结点
 void displayLeafNodes(BTNode* t) {
-    if (t == NULL)  return;
+    if (t == NULL)
+        return;
     else {
         // 采用先序遍历的思想，先判断根节点是不是叶子结点，再去处理左右子树
         // 实际上采用后序遍历也是可以的，但是不如先序遍历那么明朗
@@ -106,13 +110,16 @@ void displayLeafNodes(BTNode* t) {
 // 获取结点值为x的元素所在的层数
 int levelOfx(BTNode* t, ElemType x, int h) {
     int temp;
-    if (t == NULL)  return -1;
-    if (t->data == x)  return h;
+    if (t == NULL)
+        return -1;
+    if (t->data == x)
+        return h;
     else {
         // 在左子树中寻找
         temp = levelOfx(t->lchild, x, h + 1);
         // 如果找到了就直接返回
-        if (temp != -1)  return temp;
+        if (temp != -1)
+            return temp;
         // 否则左子树没有找到就去寻找右子树
         return levelOfx(t->rchild, x, h + 1);
     }
@@ -120,8 +127,10 @@ int levelOfx(BTNode* t, ElemType x, int h) {
 
 // 获取二叉树第k层的结点个数
 void getLevelK(BTNode* t, int h, int k, int& n) {
-    if (t == NULL || h > k)  return;
-    if (h == k)  ++n;
+    if (t == NULL || h > k)
+        return;
+    if (h == k)
+        ++n;
     else {
         getLevelK(t->lchild, h + 1, k, n);
         getLevelK(t->rchild, h + 1, k, n);
@@ -131,8 +140,10 @@ void getLevelK(BTNode* t, int h, int k, int& n) {
 // 判断两颗二叉树是否相似
 bool like(BTNode* t1, BTNode* t2) {
     bool like1, like2;
-    if (t1 == NULL && t2 == NULL)  return true;
-    else if (t1 == NULL || t2 == NULL)  return false;
+    if (t1 == NULL && t2 == NULL)
+        return true;
+    else if (t1 == NULL || t2 == NULL)
+        return false;
     else {
         like1 = like(t1->lchild, t2->lchild);
         like2 = like(t1->rchild, t2->rchild);
@@ -142,8 +153,10 @@ bool like(BTNode* t1, BTNode* t2) {
 
 // 设计一个算法求出一个结点x的所有祖先结点
 bool ancestor(BTNode* t, int x) {
-    if (t == NULL)  return false;
-    else if (t != NULL && t->lchild->data == x || t != NULL && t->rchild->data == x) {
+    if (t == NULL)
+        return false;
+    else if (t != NULL && t->lchild->data == x ||
+             t != NULL && t->rchild->data == x) {
         cout << t->data << " ";
         return true;
     } else if (ancestor(t->lchild, x) || ancestor(t->rchild, x)) {
