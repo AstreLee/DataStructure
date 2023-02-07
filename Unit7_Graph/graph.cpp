@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include "adjlist.h"
 #include "matrix.h"
 using namespace std;
@@ -108,4 +109,28 @@ void DFS_matrix(MatGraph* G, int v) {
 }
 
 // 邻接表的广度优先遍历，利用队列存储每一层的结点
-void BFS(AdjGraph* G) {}
+void BFS(AdjGraph* G) {
+    queue<int> q;       // 定义队列
+    int visited[G->n];  // 定义访问数组
+    for (int i = 0; i < G->n; ++i) {
+        visited[i] = 0;
+    }                // 初始化访问数组
+    visited[0] = 1;  // 假设从第一个顶点开始访问
+    cout << "0"
+         << " ";
+    q.push(0);            // 添加第一个顶点
+    while (!q.empty()) {  // 队列不空的时候继续循环
+        // 出队一个结点
+        int temp = q.front();
+        // 访问这个结点的所有邻接结点
+        ArcNode* p = G->adjlist[temp].head;
+        while (p != NULL) {
+            if (visited[p->adjvex] == 0) {  // 当前邻接点未被访问
+                cout << p->adjvex << " ";   // 输出当前邻接点
+                visited[p->adjvex] = 1;  // 当前邻接点标记已经访问过
+                q.push(p->adjvex);       // 入队
+            }
+            p = p->nextarc;  // 继续访问下一个邻接点
+        }
+    }
+}
