@@ -21,8 +21,10 @@ int BinarySearch(int* pt, int n, int target) {
     int high = n - 1;
     while (low <= high) {
         int mid = low + (high - low) / 2;
-        if (pt[mid] <= target)  low = mid + 1;
-        else high = mid - 1;
+        if (pt[mid] <= target)
+            low = mid + 1;
+        else
+            high = mid - 1;
     }
     return low;
 
@@ -39,7 +41,9 @@ int BinarySearch(int* pt, int n, int target) {
     // high是不会指向target的，所以low就是最终的位置
 
     // 如果target存在而且有多个的话
-    // 1. 如果等号加在low上面的话，最终low就指向了target的后一个元素，high指向了target
-    // 2. 如果等号加在high上面的话，最终low就指向了target的第一个元素，high指向了low前面一个元素
+    // 1.
+    // 如果等号加在low上面的话，最终low就指向了target的后一个元素，high指向了target
+    // 2.
+    // 如果等号加在high上面的话，最终low就指向了target的第一个元素，high指向了low前面一个元素
     // 3. 等号加在哪里和折半插入排序的稳定性有关系
 }
