@@ -36,7 +36,7 @@ void disGraph(AdjGraph* G) {
         ArcNode* p = G->adjlist[i].head;
         cout << i;  // 先输出头结点信息
         while (p != NULL) {
-            cout << p->adjvex << p->weight;
+            cout << p->adjvex << p->weight << endl;
         }
         cout << endl;
     }
